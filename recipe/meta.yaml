@@ -30,11 +30,10 @@ requirements:
     - magika >=0.6.1,<0.7.dev0
     - charset-normalizer
 
-tests:
+test:
   imports:
     - markitdown
-  requirements:
-    - python
+  requires:
     - pip
   commands:
     - pip check
