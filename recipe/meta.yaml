@@ -1,5 +1,5 @@
 {% set name = "markitdown" %}
-{% set version = "0.1.1" %}
+{% set version = "0.1.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: da97a55a45a3d775ea758e88a344d5cac94ee97115fb0293f99027d32c2fc3f6
+  sha256: 4c956ff1528bf15e1814542035ec96e989206d19d311bb799f4df973ecafc31a
 
 build:
   number: 0
@@ -29,6 +29,7 @@ requirements:
     - markdownify
     - magika >=0.6.1,<0.7.dev0
     - charset-normalizer
+    - defusedxml
 
 test:
   imports:
