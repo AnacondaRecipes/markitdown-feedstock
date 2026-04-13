@@ -12,10 +12,10 @@ source:
 build:
   number: 0
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  skip: true  # [py<310]
-  python:
-    entry_points:
-      - markitdown = markitdown.__main__:main
+  # magika dep has no py314 build; numpy/mkl/onnxruntime cyclic dep on win py3.10
+  skip: true  # [py<310 or py>313 or (win and py==310)]
+  entry_points:
+    - markitdown = markitdown.__main__:main
 
 requirements:
   host:
